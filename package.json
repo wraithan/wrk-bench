@@ -10,5 +10,20 @@
   "license": "MIT",
   "dependencies": {
     "wrk": "0.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wraithan/bench-wrk.git"
+  },
+  "keywords": [
+    "benchmark",
+    "wrk",
+    "bench",
+    "stats"
+  ],
+  "bugs": {
+    "url": "https://github.com/wraithan/bench-wrk/issues"
+  },
+  "homepage": "https://github.com/wraithan/bench-wrk"
 }
