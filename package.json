@@ -9,7 +9,8 @@
   "author": "Wraithan <xwraithanx@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "wrk": "0.0.1"
+    "through2": "^0.6.3",
+    "wrk": "0.0.2"
   },
   "devDependencies": {},
   "repository": {

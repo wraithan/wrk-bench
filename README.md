@@ -9,7 +9,7 @@ This doesn't work yet, this is just some ideal setup.
 ```javascript
 var bench = require('bench-wrk')
 
-bench({
+var job = bench({
 	name: 'my site'
 	url: 'http://localhost:3000',
 	threads: '2',
@@ -17,7 +17,7 @@ bench({
 	connections: 5
 })
 
-bench.pipe(process.stdout)
+job.pipe(process.stdout)
 ```
 
 ## theoretical changes
