@@ -64,6 +64,5 @@ the API
 
 * Possibly take an array of jobs
 * Delay between jobs seems like a good idea but I don't have a use case yet.
-* There are likely more settings in `wrk` that I'll want to expose.
 * Standardize the output. So `KB`/`MB` values are always bytes. `ns`, `ms`, `s`,
   `m`, etc all changed to `ms`
