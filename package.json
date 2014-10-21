@@ -12,7 +12,9 @@
     "through2": "^0.6.3",
     "wrk": "0.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "json-stringify-stream": "0.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wraithan/wrk-bench.git"

@@ -7,6 +7,9 @@ function bench(options) {
   var stream = through2.obj()
 
   createJob(options, function (err, results) {
+    if (err) throw err
+    results = prefixMerge('options', results, options)
+    results.timestamp = Date.now()
     stream.push(results)
   })
 
@@ -21,4 +24,13 @@ function createJob(options, callback) {
       createJob(options, callback)
     }
   })
+}
+
+function prefixMerge(prefix, lhs, rhs) {
+  for (var key in rhs) {
+    if (rhs.hasOwnProperty(key)) {
+      lhs[prefix + '-' + key] = rhs[key]
+    }
+  }
+  return lhs
 }
