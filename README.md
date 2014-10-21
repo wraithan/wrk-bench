@@ -1,4 +1,4 @@
-# bench-wrk
+# wrk-bench
 
 I want to be able to pull down stats on a staging server at regular intervals.  This will take your sites to hit, hit them with `wrk` using your specified settings, then create a result object with the `wrk` stats, a timestamp, name of the site, and the exact url hit.
 

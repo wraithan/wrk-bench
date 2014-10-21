@@ -1,5 +1,5 @@
 {
-  "name": "bench-wrk",
+  "name": "wrk-bench",
   "version": "0.0.0",
   "description": "Uses wrk to conduct a continuous benchmark",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/wraithan/bench-wrk.git"
+    "url": "https://github.com/wraithan/wrk-bench.git"
   },
   "keywords": [
     "benchmark",
@@ -24,7 +24,7 @@
     "stats"
   ],
   "bugs": {
-    "url": "https://github.com/wraithan/bench-wrk/issues"
+    "url": "https://github.com/wraithan/wrk-bench/issues"
   },
-  "homepage": "https://github.com/wraithan/bench-wrk"
+  "homepage": "https://github.com/wraithan/wrk-bench"
 }
