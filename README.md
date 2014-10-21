@@ -28,14 +28,14 @@ Which might result in output that looks like the following:
 
 ```json
 {
-  "transferPerSec": "355.09KB",
+  "transferPerSec": 355090,
   "requestsPerSec": 228.54,
   "requestsTotal": 2286,
-  "durationActual": "10.00s",
-  "transferTotal": "3.47MB",
-  "latencyAvg": "17.62ms",
-  "latencyStdev": "4.29ms",
-  "latencyMax": "73.93ms",
+  "durationActual": 10000,
+  "transferTotal": 3470000,
+  "latencyAvg": 17.62,
+  "latencyStdev": 4.29,
+  "latencyMax": 73.93,
   "latencyStdevPerc": 98.67,
   "rpsAvg": 115.89,
   "rpsStdev": 15.94,
@@ -48,6 +48,9 @@ Which might result in output that looks like the following:
   "timestamp": 1413854725961
 }
 ```
+
+Quantities of data are measured in bytes, quantities of time are measure in
+milliseconds.
 
 Notice how the options is merged into the object. This makes it so you don't
 have to track each job yourself. Also if you add any other properties to the
@@ -64,5 +67,3 @@ the API
 
 * Possibly take an array of jobs
 * Delay between jobs seems like a good idea but I don't have a use case yet.
-* Standardize the output. So `KB`/`MB` values are always bytes. `ns`, `ms`, `s`,
-  `m`, etc all changed to `ms`

@@ -1,5 +1,6 @@
 var wrk = require('wrk')
 var through2 = require('through2')
+var si = require('si-tools')
 
 module.exports = bench
 
@@ -8,6 +9,14 @@ function bench(options) {
 
   createJob(options, function (err, results) {
     if (err) throw err
+    for (var key in results) {
+      if (results.hasOwnProperty(key)) {
+        var value = results[key]
+        if (typeof value === 'string') {
+          results[key] = parseSi(value)
+        }
+      }
+    }
     results = prefixMerge('options', results, options)
     results.timestamp = Date.now()
     stream.push(results)
@@ -33,4 +42,12 @@ function prefixMerge(prefix, lhs, rhs) {
     }
   }
   return lhs
+}
+
+function parseSi(number) {
+  var result = si.parse(number)
+  if (result.unit === 's') {
+    return result.number*1000
+  }
+  return si.number
 }
