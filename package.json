@@ -1,6 +1,6 @@
 {
   "name": "wrk-bench",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Uses wrk to conduct a continuous benchmark",
   "main": "index.js",
   "scripts": {
