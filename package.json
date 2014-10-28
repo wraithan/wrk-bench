@@ -11,7 +11,7 @@
   "dependencies": {
     "si-tools": "^1.0.0",
     "through2": "^0.6.3",
-    "wrk": "0.0.2"
+    "wrk": "^1.0.0"
   },
   "devDependencies": {
     "json-stringify-stream": "0.0.1"
