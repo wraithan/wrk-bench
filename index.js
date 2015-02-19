@@ -4,11 +4,14 @@ var si = require('si-tools')
 
 module.exports = bench
 
-function bench(options) {
+function bench(options, errorCallback) {
   var stream = through2.obj()
 
   createJob(options, function (err, results) {
-    if (err) throw err
+    if (err) {
+      return errorCallback(err)
+    }
+
     for (var key in results) {
       if (results.hasOwnProperty(key)) {
         var value = results[key]
@@ -29,7 +32,12 @@ function createJob(options, callback) {
   wrk(options, function (err, results) {
     callback(err, results)
 
-    if (!err) {
+    if (err) {
+      // If an error occurs, hold off for 1s then try again.
+      setTimeout(function () {
+        createJob(options, callback)
+      }, 1000)
+    } else {
       createJob(options, callback)
     }
   })
